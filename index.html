@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fractal</title>
+    <style>
+        .app__controls {
+            position: absolute;
+            z-index: 10;
+        }
+
+        .app__row {
+            margin: 10px 10px 0;
+        }
+
+        .app__label {
+            display: block;
+        }
+
+        .app__canvas {
+            position: absolute;
+            border: 1px solid black;
+        }
+
+        .app__canvas_bottom {
+            z-index: 1;
+        }
+
+        .app__canvas_top {
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <div class="app__controls">
+        <div class="app__row">
+            <button class="app__button app__button_start">start</button>
+            <button class="app__button app__button_stop">stop</button>
+            <button class="app__button app__button_clear">clear</button>
+        </div>
+        <div class="app__row">
+            <input id="counter" class="app__input app__input_counter" type="range" min="3" max="8" step="1">
+            <label for="counter" class="app__label app__label_counter">
+                N: <span class="app__value app__value_counter"></span>
+            </label>
+        </div>
+        <div class="app__row">
+            <input class="app__input app__input_divider" type="range" min="0.1" max="1" step="0.1">
+            <label class="app__label app__label_divider">
+                D: <span class="app__value app__value_divider"></span>
+            </label>
+        </div>
+    </div>
+
+    <canvas id="app-top-layer" class="app__canvas app__canvas_top" height="700" width="1000"></canvas>
+    <canvas id="app-bottom-layer" class="app__canvas app__canvas_bottom" height="700" width="1000"></canvas>
+</div>
+</body>
+<script src="main.js"></script>
+<script>
+    App.create({
+        topLayer: '#app-top-layer',
+        bottomLayer: '#app-bottom-layer',
+        counter: '.app__input_counter',
+        counterValue: '.app__value_counter',
+        divider: '.app__input_divider',
+        dividerValue: '.app__value_divider',
+        startBtn: '.app__button_start',
+        stopBtn: '.app__button_stop',
+        clearBtn: '.app__button_clear'
+    }).init();
+</script>
+</html>
