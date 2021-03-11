@@ -1,2 +1,2 @@
-# -sierpinski-triangle
+# sierpinski-triangle
 Render Sierpiński triangle
