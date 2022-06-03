@@ -1,5 +1,5 @@
 # sierpinski-triangle
-Render Sierpinski triangle [EXAMPLE](https://igor-pravdin.github.io/sierpinski-triangle/)
+Render Sierpinski triangle [EXAMPLE](https://ihor-pravdin.github.io/sierpinski-triangle/)
 
 ![Application](example.png)
 
